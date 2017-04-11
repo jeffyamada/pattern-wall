@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 // import App from './components/App';
 import Circles from './components/Circles';
-import NotFound from './components/NotFound';
+// import NotFound from './components/NotFound';
 import * as reducers from './reducers';
 
 // reducers
@@ -35,9 +35,8 @@ export default function Root() {
     <Provider store={store}>
       <Router history={history}>
         <Route path="/" component={Circles} />
-        <Route path="/circles" component={Circles} />
-        <Route path="404" component={NotFound} />
-        <Redirect from="*" to="404" />
+        <Route path="404" component={Circles} />
+        <Redirect from="*" to="/" />
       </Router>
     </Provider>
   );

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "rm -rf ./dist && NODE_ENV=production webpack",
-    "heroku": "rm -rf ./dist && npm run build && node NODE_ENV=production server.js"
+    "heroku": "npm run build && node server.js"
   },
   "repository": {
     "type": "git",
