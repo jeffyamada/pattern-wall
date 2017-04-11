@@ -90,7 +90,7 @@ export default class Circles extends Component {
       circle.background.width = circleSize * circle.introFrontProgress;
       circle.background.height = circleSize * circle.introFrontProgress;
 
-      const minRatio = Math.max(0.1, distance / this.maxDistance);
+      const minRatio = Math.max(0.1, distance / (this.maxDistance * 0.6));
       const ratio = Math.min(0.6, minRatio) * circle.introBackProgress;
       circle.foreground.width = circleSize * ratio;
       circle.foreground.height = circleSize * ratio;

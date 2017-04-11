@@ -5,7 +5,7 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
-import App from './components/App';
+// import App from './components/App';
 import Circles from './components/Circles';
 import NotFound from './components/NotFound';
 import * as reducers from './reducers';
@@ -34,7 +34,7 @@ export default function Root() {
   return (
     <Provider store={store}>
       <Router history={history}>
-        <Route path="/" component={App} />
+        <Route path="/" component={Circles} />
         <Route path="/circles" component={Circles} />
         <Route path="404" component={NotFound} />
         <Redirect from="*" to="404" />
